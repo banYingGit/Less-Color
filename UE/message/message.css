@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS message */
+.message {
+    position: fixed;
+    z-index:91;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.message-box {
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    width: 500px;
+    height: 300px;
+    margin: -150px 0 0 -250px;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-transition: all .25s;
+    transition: top .25s;
+}
+.into .message-box { top: 50%; }
+.message-box h2 {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 40px;
+    color: #fff;
+}
+.message-box h2 a {
+    display: block;
+    float: right;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    background: url(../../images/common/ico.png) -142px -5px no-repeat;
+    text-indent: -999em;
+}
+.message-content {
+    width: 380px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.message-content h3 {
+    position: relative;
+    padding-left: 70px;
+    padding-bottom: 20px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: lighter;
+}
+.message-content h3:before {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    content: "";
+}
+.message-content-text {
+    font-size: 14px;
+    color: #7b7b7b;
+}
+.message-bt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 47px;
+    padding-top: 13px;
+    text-align: center;
+}
+.message-bt a {
+    margin: 0 5px;
+    min-width: 60px;
+}
+.message-bt a span {
+    padding-left: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.message-sm {
+    height: 180px;
+    margin-top: -90px;
+}
+.message-sm .message-content h3 { display: none; }
+.message-sm .message-content {
+    width: 100%;
+    padding: 35px 20px 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/*信息 蓝色*/
+.message-info h2 { background: #0084ff; }
+.message-info .message-content h3 { color: #0084ff; }
+.message-info .message-content h3:before { background: url(../../images/common/ico.png) -287px -150px no-repeat; }
+/*警告 黄色*/
+.message-warning h2 { background: #f39801; }
+.message-warning .message-content h3 { color: #f39801; }
+.message-warning .message-content h3:before { background: url(../../images/common/ico.png) -395px -260px no-repeat; }
+.message-warning .message-bt .btn-default{border-color: #F39801;  background: #F39801;}
+.message-warning .message-bt .btn-default-alt{border-color: #F39801; color:#F39801;}
+/*错误 红色*/
+.message-error h2 { background: #fd365b; }
+.message-error .message-content h3 { color: #fd365b; }
+.message-error .message-content h3:before { background: url(../../images/common/ico.png) 0 -226px no-repeat; }
+.message-error .message-bt .btn-default{border-color: #fd365b;  background: #fd365b;}
+.message-error .message-bt .btn-default-alt{border-color: #fd365b; color:#fd365b;}
+/*完成 绿色*/
+.message-complete h2 { background: #22ac38; }
+.message-complete .message-content h3 { color: #22ac38; }
+.message-complete .message-content h3:before { background: url(../../images/common/ico.png) -393px -115px no-repeat; }
+.message-complete .message-bt .btn-default{border-color: #22ac38;  background: #22ac38;}
+.message-complete .message-bt .btn-default-alt{border-color: #22ac38; color:#22ac38;}

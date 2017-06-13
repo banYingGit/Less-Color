@@ -1,0 +1,264 @@
+/******* UI 按钮 *******/
+.btn {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: all .3s ease 0s;
+}
+/* 按钮滑过样式*/
+.btn:after {
+	position: absolute;
+	display: block;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+	opacity: .2;
+	-moz-transition: all .3s ease-out 0s;
+	-webkit-transition: all .3s ease-out 0s;
+	transition: all .3s ease-out 0s;
+	content: '';
+}
+.btn:hover:after { top: 100%; }
+/*按钮大小*/
+.btn-xs {
+	padding: 1px 5px;
+	font-size: 12px;
+}
+.btn-sm {
+	padding: 3px 10px;
+	font-size: 14px;
+}
+.btn-md {
+	padding: 7px 18px;
+	font-size: 16px;
+}
+.btn-lg {
+	padding: 7px 30px;
+	font-size: 20px;
+}
+.btn-xs i { font-size: 14px; }
+.btn-sm i { font-size: 16px; }
+.btn-md i,
+.btn-lg i { font-size: 18px; }
+/* 灰色按钮 */
+.btn[class*='btn-greay'] { cursor: default; }
+.btn[class*='btn-greay']:after { display: none; }
+
+
+
+
+/******* UI 表单 *******/
+
+input:-webkit-autofill {
+-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+.input-box {
+	display: block;
+	padding: 0 10px;
+	height: 40px;
+	border-radius: 3px;
+	line-height: 40px\9;
+	outline: none;
+}
+.textarea-box {
+	display: block;
+	padding-left: 5px;
+	height: 80px;
+	padding: 10px;
+	border-radius: 3px;
+	line-height: 20px\9;
+	outline: none;
+}
+.select {
+	padding: 8px;
+	border-radius: 3px;
+}
+label.error {
+	float: left;
+	margin-left: 10px;
+	line-height: 30px;
+}
+label.error i {
+	padding: 0 5px;
+	font-size: 18px;
+}
+/* 默认复选框 */
+.form-box { display: none; }
+.form-box + .check-box-btn {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+}
+.form-box:checked + .check-box-btn:after {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 20px;
+	content: '√';
+}
+.check-box-btn:before {
+	display: block;
+	width: auto;
+	content: attr(data-tg);
+}
+.form-box + .radio-box-btn {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+.form-box:checked + .radio-box-btn:after {
+	position: absolute;
+	display: block;
+	top: 4px;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	content: '';
+}
+/* 选项卡复选框 or 选项卡单选按钮*/
+.form-box + .check-tab-btn,
+.form-box + .radio-tab-btn {
+	position: relative;
+	display: block;
+	z-index: 2;
+	width: 75px;
+	height: 25px;
+	margin-right: -1px;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all .3s;
+}
+.form-box + .check-tab-btn:after,
+.form-box + .radio-tab-btn:after {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	content: attr(data-tg);
+	transition: all .3s;
+}
+.form-box[disabled] + .check-tab-btn,
+.form-box[disabled] + .radio-tab-btn { z-index: 1; }
+/* 开关键 */
+.form-box + .on-off-A {
+	position: relative;
+	display: block;
+	width: 70px;
+	height: 28px;
+	box-sizing: border-box;
+	padding: 4px;
+	border-radius: 14px;
+	transition: all .3s;
+	cursor: pointer;
+}
+.form-box + .on-off-A:after {
+	position: relative;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	border-radius: 14px;
+	content: '';
+	transition: all .3s;
+}
+.form-box:checked + .on-off-A:after { left: 50%; }
+.form-box + .on-off-B {
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 26px;
+	overflow: hidden;
+	line-height: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	transition: all .3s;
+	transform: skewX(-15deg);
+	cursor: pointer;
+}
+.form-box + .on-off-B:after,
+.form-box + .on-off-B:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: all .3s;
+}
+.form-box + .on-off-B:after {
+	left: 0;
+	content: attr(data-tg-on)
+}
+.form-box + .on-off-B:before {
+	left: -100%;
+	content: attr(data-tg-off)
+}
+/*鼠标按下*/
+.form-box + .on-off-B:active:after { left: -10%; }
+.form-box:checked + .on-off-B:active:before { left: 10%; }
+/*选择后*/
+.form-box:checked + .on-off-B:after { left: 100%; }
+.form-box:checked + .on-off-B:before { left: 0; }
+.form-box + .on-off-C {
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 26px;
+	overflow: hidden;
+	line-height: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	transition: all .3s;
+	cursor: pointer;
+}
+.form-box + .on-off-C:after,
+.form-box + .on-off-C:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	backface-visibility: hidden;
+	transition: all .3s;
+}
+.form-box + .on-off-C:after {
+	transform: rotateY(0deg);
+	content: attr(data-tg-on);
+}
+.form-box + .on-off-C:before {
+	transform: rotateY(180deg);
+	content: attr(data-tg-off)
+}
+/*鼠标按下*/
+.form-box + .on-off-C:active:after { transform: rotateY(-30deg); }
+.form-box:checked + .on-off-C:active:before { transform: rotateY(30deg); }
+/*选择后*/
+.form-box:checked + .on-off-C:after { transform: rotateY(-180deg); }
+.form-box:checked + .on-off-C:before { transform: rotateY(0deg); }

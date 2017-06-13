@@ -1,0 +1,317 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/common.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>卡片</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet/less"   href="../../resources/less/skin/value_blue.less"  id="less_file"/>
+<link rel="stylesheet" href="../../resources/css/common/layout.css">
+<link rel="stylesheet" href="../../resources/css/common/fonts.css">
+<link rel="stylesheet" href="../../resources/css/common/header.css">
+<link rel="stylesheet" href="../../resources/css/common/menu.css">
+<link rel="stylesheet" href="../../resources/css/common/content.css">
+<link rel="stylesheet" href="../../resources/css/common/wgt.css">
+<!-- 外部引用样式-->
+<link rel="stylesheet" type="text/css" href="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="card.css">
+<link rel="stylesheet" type="text/css" href="cardAnimation.css">
+<link rel="stylesheet" type="text/css" href="../button-and-form/button-and-form.css">
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<header class="header darker-background">
+  <h1><img src="../../resources/images/common/logo.png"></h1>
+  <div class="menu-icon"><span></span></div>
+  <div class="user"><img src="../../resources/images/common/usre.jpg"> 您好！admin
+    <div class="user-box">
+      <P>用户名：admin</P>
+      <P>上次登录时间：<span>2015-12-15  18:21:15</span></P>
+      <P>登录IP：<span>172.166.201.122</span></P>
+      <P><a href="#"><i class="icon-prev"></i>用户注销</a></P>
+    </div>
+  </div>
+  <div class="remind"><i class="demo-icon icon-bell-alt" id="newsClick">&#xe874;</i><strong></strong> </div>
+  <div class="remind"><i class="demo-icon icon-mail-alt" id="emailClick">&#xe826;</i><strong></strong>
+    <div class="remind-box" id="newsEle">
+      <p class="remind-box-title">您有<span>0</span>条站内信</p>
+      <div class="remind-box-main PerfectScrollbar">
+        <div class="p-5">
+          <ul class="remind-box-list" id="newsList">
+            <script id="newsListId" type="text/x-handlebars-template">
+              {{#each list}}
+               <li><a href="#">查看</a>恭喜您，您的密码修改成功</li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="remind-more">+ 查看更多</a> </div>
+  </div>
+  <div class="header-search">
+    <input name="" type="text">
+    <a href="javascript:void(0)" class="demo-icon icon-zoom-in" title="搜索">&#xf087;</a></div>
+</header>
+<menu class="menu">
+  <div class="menu-box PerfectScrollbar">
+    <div class="menu-con">
+      <ul class="left-nav" id="menu">
+        <li> <a href="javascript:void(0)" class="level-one level-one-foc" title="首页"><i class="demo-icon icon-home-1">&#xea8a;</i>首页</a> </li>
+        <li><a href="javascript:void(0)" class="level-one" title="功能组件"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> 功能组件</a>
+          <ul>
+            <li><a href="../../UE/modal/modal.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>模态框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>提示框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>下拉框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>进度条</a></li>
+            <li><a href="../../UE/timepicker/timepicker.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>时间控件</a></li>
+            <li><a href="../../UE/selectUI/selectable.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>左右互选</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)" class="level-one" title="UI界面"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> UI 界面</a>
+          <ul>
+            <li><a href="../button-and-form/button-and-form.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>按钮与表单</a></li>
+            <li><a href="../table/table.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>表格</a></li>
+            <li><a href="card.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>卡片</a></li>
+            <li><a href="../font/font.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>字体库</a></li>
+            <li><a href="../list/list.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>数据统计</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</menu>
+<div class="content" ><!-- InstanceBeginEditable name="contenter" -->
+  <h2 class="page-title">UI 商品卡片 Card</h2>
+  <div class="row">
+    <div class="panel">
+      <h3 class="panel-title">Overlays Background</h3>
+      <ul  class="interface-body clear">
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly1"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly1</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly2"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly2</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly3"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly3</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly4"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly4</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly5"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly5</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly6"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly6</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly7"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：价格说明</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-1"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly8-1</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-2"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly8-2</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-3"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly8-3</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-4"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly8-4</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-5"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly8-5</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly9"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly9</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="panel m-t-20">
+      <h3 class="panel-title">Overlays Text</h3>
+      <ul  class="interface-body clear">
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly1"></div>
+          <div class="ovrly-text ovrly-text1">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly-text1</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly2"></div>
+          <div class="ovrly-text ovrly-text2">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly-text2</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-1"></div>
+          <div class="ovrly-text ovrly-text3">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly-text3</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-2"></div>
+          <div class="ovrly-text ovrly-text4">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly-text4</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly8-5"></div>
+          <div class="ovrly-text ovrly-text5">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly-text5</div>
+          </div>
+        </li>
+        <li><img src="../../resources/images/mock_img/pic_product4.jpg" class="pic">
+          <div class="ovrly ovrly9"></div>
+          <div class="ovrly-text ovrly-text6">
+            <div class="interface-title ovrly-title"><a href="#">这里是标题</a></div>
+            <div class="interface-datail  ovrly-detail">调用延迟样式：ovrly-text5</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="panel  m-t-20">
+      <h3 class="panel-title">Overlays Img</h3>
+      <ul  class="interface-body clear">
+        <li class="ovrly-img ovrly-img1">
+          <div class="pic"><img src="../../resources/images/mock_img/pic_product4.jpg" ></div>
+          <div class="ovrly-img-text">
+            <div class="interface-title2"><a href="#">ovrly-img1</a></div>
+            <div class="interface-datail2">The important thing in life is to have a great aim, and the determination to attain it.</div>
+            <div class="text-algin-m m-t-10"><a href="javascript:void(0)" class="btn btn-sm btn-default">Learn more</a></div>
+          </div>
+        </li>
+        <li class="ovrly-img ovrly-img2">
+          <div class="pic"><img src="../../resources/images/mock_img/pic_product4.jpg" ></div>
+          <div class="ovrly-img-text">
+            <div class="interface-title2"><a href="#">ovrly-img2</a></div>
+            <div class="interface-datail2">The important thing in life is to have a great aim, and the determination to attain it.</div>
+            <div class="text-algin-m m-t-10"><a href="javascript:void(0)" class="btn btn-sm btn-default">Learn more</a></div>
+          </div>
+        </li>
+        <li class="ovrly-img ovrly-img3">
+          <div class="pic"><img src="../../resources/images/mock_img/pic_product4.jpg" ></div>
+          <div class="ovrly-img-text">
+            <div class="interface-title2"><a href="#">ovrly-img3</a></div>
+            <div class="interface-datail2">The important thing in life is to have a great aim, and the determination to attain it.</div>
+            <div class="text-algin-m m-t-10"><a href="javascript:void(0)" class="btn btn-sm btn-default">Learn more</a></div>
+          </div>
+        </li>
+        <li class="ovrly-img ovrly-img4">
+          <div class="pic"><img src="../../resources/images/mock_img/pic_product4.jpg" ></div>
+          <div class="ovrly-img-text">
+            <div class="interface-title2"><a href="#">ovrly-img4</a></div>
+            <div class="interface-datail2">The important thing in life is to have a great aim, and the determination to attain it.</div>
+            <div class="text-algin-m m-t-10"><a href="javascript:void(0)" class="btn btn-sm btn-default">Learn more</a></div>
+          </div>
+        </li>
+        <li class="ovrly-img ovrly-img5">
+          <div class="pic"><img src="../../resources/images/mock_img/pic_product4.jpg" ></div>
+          <div class="ovrly-img-text">
+            <div class="interface-title2"><a href="#">ovrly-img5</a></div>
+            <div class="interface-datail2">The important thing in life is to have a great aim, and the determination to attain it.</div>
+            <div class=" text-algin-m m-t-10"><a href="javascript:void(0)" class="btn btn-sm btn-default">Learn more</a></div>
+          </div>
+        </li>
+        <li class="ovrly-img ovrly-img6">
+          <div class="pic"><img src="../../resources/images/mock_img/pic_product4.jpg" ></div>
+          <div class="ovrly-img-text">
+            <div class="interface-title2"><a href="#">ovrly-img6</a></div>
+            <div class="interface-datail2">The important thing in life is to have a great aim, and the determination to attain it.</div>
+            <div class="text-algin-m m-t-10"><a href="javascript:void(0)" class="btn btn-sm btn-default">Learn more</a></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<div class="foot">2015-12 © 2016-12 Modern by Banying. 『The youth waystation, the dream began here!』</div>
+<div class="skin"><i class="demo-icon icon-cog">&#xe8a1;</i>
+  <p><span id="skinRed">pink</span><span id="skinBlue">blue</span><span id="skinGreen">green</span></p>
+</div>
+<!---外部插件---> 
+<script src="../../resources/js/lib/jquery/jquery-1.8.3.js"></script> 
+<script src="../../resources/js/lib/less/less.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.with-mousewheel.min.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfectScrollbar.js"></script> 
+<script src="../../resources/js/lib/handerbars/handlebars-v2.0.0.js"></script> 
+<script src="../../resources/js/lib/jqueryUI/jquery-ui.js"></script> 
+<!--模板数据--> 
+<script src="../../resources/js/common/listTemp.js"></script> 
+<!---页面共通脚本---> 
+<script src="../../resources/js/common/skin.js"></script> 
+<script src="../../resources/js/common/menu.js"></script> 
+<script>
+$(function() {
+    //消息提醒数据
+    ListTemp($('#newsListId'), $('#newsList'), 10);
+
+});
+</script> 
+<!-- InstanceBeginEditable name="footjs" -->
+<script>
+$(function(){
+	 //菜单
+        menuFoc("#menu", 2 ,2);
+	})
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

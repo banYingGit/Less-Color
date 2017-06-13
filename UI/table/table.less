@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+.table tr th {
+  color: @greyDark;
+}
+/*下边线表格*/
+.table-line tr th {
+  border-bottom: solid 2px @defaultLighter;
+}
+.table-line tr td {
+  border-bottom: solid 1px @defaultLighter;
+}
+/*全封闭表格*/
+.table-bor {
+  border-left: solid 1px @defaultLighter;
+}
+.table-bor tr th {
+  border-bottom: solid 1px @defaultLighter;
+  border-top: solid 1px @defaultLighter;
+  border-right: solid 1px @defaultLighter;
+}
+.table-bor tr td {
+  border-right: solid 1px @defaultLighter;
+  border-bottom: solid 1px @defaultLighter;
+}
+
+/*修饰表格*/
+.table-hover tbody tr:hover {
+  background: lighten(@defaultLighter , 6.5%);
+}
+.table-active-odd tbody tr:nth-child(odd) td {
+  background: lighten(@defaultLighter ,6.5%);
+}
+.table-active-even tbody tr:nth-child(even) td {
+  background: lighten(@defaultLighter , 6.5%);
+}
+
+.table-header  tr th {
+  background:lighten(@defaultLighter , 6.5%);
+
+}

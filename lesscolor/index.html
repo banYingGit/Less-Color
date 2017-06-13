@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet/less" type="text/css"  href="./css/index_red.less" id="less_file">
+<title>
+  Less.js动态加载0000
+</title>
+</head>
+<body class="usage">
+
+<header >
+<button id="change2red">red</button>
+<button id="change2blue">blue</button>
+</header>
+
+<footer>
+[]
+</footer>
+
+<!-- Core JavaScript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script src="./js/less.js"></script>
+<script></script>
+<script>
+$(document).ready(function(){
+	//less.watch();
+	
+	$('#change2red').on('click','',function(){
+		var target=$(this).text();
+		$('footer').html('['+target+']');
+		changeStyle('less_file','index_',target);
+	});
+
+	$('#change2blue').on('click','',function(){
+		var target=$(this).text();
+		$('footer').html('['+target+']');
+		changeStyle('less_file','index_',target);
+	});
+	
+	var changeStyle=function(id,source,target){
+		var targetLessFile=source+target;
+				
+		var regex=new RegExp('^less\:less-css-'+source,'g');
+		$('style[id]').each(function(){
+			$(this).remove();
+			if(regex.test($(this).attr('id'))){
+				$(this).remove();
+				}})
+		
+		$('#'+id).attr('href','./css/'+targetLessFile+'.less');
+		less.refresh();
+	};
+});
+</script>
+</body>
+</html>

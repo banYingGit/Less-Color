@@ -1,0 +1,447 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/common.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The youth waystation</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet/less"   href="../../resources/less/skin/value_blue.less"  id="less_file"/>
+<link rel="stylesheet" href="../../resources/css/common/layout.css">
+<link rel="stylesheet" href="../../resources/css/common/fonts.css">
+<link rel="stylesheet" href="../../resources/css/common/header.css">
+<link rel="stylesheet" href="../../resources/css/common/menu.css">
+<link rel="stylesheet" href="../../resources/css/common/content.css">
+<link rel="stylesheet" href="../../resources/css/common/wgt.css">
+<!-- 外部引用样式-->
+<link rel="stylesheet" type="text/css" href="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../../UI/button-and-form/button-and-form.css">
+<link rel="stylesheet" type="text/css" href="modal.css">
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<header class="header darker-background">
+  <h1><img src="../../resources/images/common/logo.png"></h1>
+  <div class="menu-icon"><span></span></div>
+  <div class="user"><img src="../../resources/images/common/usre.jpg"> 您好！admin
+    <div class="user-box">
+      <P>用户名：admin</P>
+      <P>上次登录时间：<span>2015-12-15  18:21:15</span></P>
+      <P>登录IP：<span>172.166.201.122</span></P>
+      <P><a href="#"><i class="icon-prev"></i>用户注销</a></P>
+    </div>
+  </div>
+  <div class="remind"><i class="demo-icon icon-bell-alt" id="newsClick">&#xe874;</i><strong></strong> </div>
+  <div class="remind"><i class="demo-icon icon-mail-alt" id="emailClick">&#xe826;</i><strong></strong>
+    <div class="remind-box" id="newsEle">
+      <p class="remind-box-title">您有<span>0</span>条站内信</p>
+      <div class="remind-box-main PerfectScrollbar">
+        <div class="p-5">
+          <ul class="remind-box-list" id="newsList">
+            <script id="newsListId" type="text/x-handlebars-template">
+              {{#each list}}
+               <li><a href="#">查看</a>恭喜您，您的密码修改成功</li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="remind-more">+ 查看更多</a> </div>
+  </div>
+  <div class="header-search">
+    <input name="" type="text">
+    <a href="javascript:void(0)" class="demo-icon icon-zoom-in" title="搜索">&#xf087;</a></div>
+</header>
+<menu class="menu">
+  <div class="menu-box PerfectScrollbar">
+    <div class="menu-con">
+      <ul class="left-nav" id="menu">
+        <li> <a href="javascript:void(0)" class="level-one level-one-foc" title="首页"><i class="demo-icon icon-home-1">&#xea8a;</i>首页</a> </li>
+        <li><a href="javascript:void(0)" class="level-one" title="功能组件"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> 功能组件</a>
+          <ul>
+            <li><a href="modal.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>模态框</a></li>
+            <li><a href="../message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>提示框</a></li>
+            <li><a href="../message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>下拉框</a></li>
+            <li><a href="../message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>进度条</a></li>
+            <li><a href="../timepicker/timepicker.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>时间控件</a></li>
+            <li><a href="../selectUI/selectable.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>左右互选</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)" class="level-one" title="UI界面"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> UI 界面</a>
+          <ul>
+            <li><a href="../../UI/button-and-form/button-and-form.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>按钮与表单</a></li>
+            <li><a href="../../UI/table/table.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>表格</a></li>
+            <li><a href="../../UI/card/card.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>卡片</a></li>
+            <li><a href="../../UI/font/font.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>字体库</a></li>
+            <li><a href="../../UI/list/list.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>数据统计</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</menu>
+<div class="content" ><!-- InstanceBeginEditable name="contenter" -->
+  <h2 class="page-title">UE 模态框 Modal</h2>
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <div class="panel">
+        <h3 class="panel-title">实例一（已有目标元素）</h3>
+        <a href="javascript:void(0)" class="btn btn-sm btn-default m-l-20 m-b-10" id="open1">打 开</a>
+        <div id="modal1">
+          <h3>我是内容区域,不加载load 数据</h3>
+        </div>
+        <div class="by-code">
+          <ul>
+            <li class="on"><span>Html</span>
+              <div class="by-code-box">&lt;div id=&quot;modal1&quot;&gt;&lt;h3&gt;我是内容区域,不加载load 数据&lt;/h3&gt;&lt;/div&gt;</div>
+            </li>
+            <li><span>Javascript</span>
+              <div class="by-code-box">
+                <p>var sureBtn = $('&lt;a href=&quot;javascript:void(0)&quot; class=&quot;btn btn-md
+                  btn-default&quot;&gt;保 存&lt;/a&gt;'),</p>
+                <p> deleteBtn = $('&lt;a href=&quot;javascript:void(0)&quot; class=&quot;btn btn-md
+                  btn-default-alt&quot; data-role=&quot;close&quot;&gt;取 消&lt;/a&gt;');</p>
+                <p> $('#modal1').modal({</p>
+                <p> title: '我是标题',</p>
+                <p>//此处&#32;url&#32;不起作用</p>
+                <p> url: 'modalData.html'<br>
+                </p>
+                <p> })<br>
+                  .on('shown',</p>
+                <p> function () {</p>
+                <p> console.info(&quot;打开之后---&quot;)</p>
+                <p> })</p>
+                <p> .on('show',</p>
+                <p> function () {</p>
+                <p> console.info(&quot;打开之前---&quot;)</p>
+                <p> })<br>
+                  .on('hidden',</p>
+                <p> function () {</p>
+                <p> console.info(&quot;关闭之后------&quot;)</p>
+                <p> })</p>
+                <p> .on('hide',</p>
+                <p> function () {</p>
+                <p> console.info(&quot;------关闭之前&quot;)</p>
+                <p> })</p>
+                <p> $('#open1').click(function () {</p>
+                <p> $('#modal1').modal('button', [sureBtn, deleteBtn])</p>
+                <p> .modal('show')<br>
+                </p>
+                <p> });</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <div class="panel">
+        <h3 class="panel-title">实例二（自动创建目标元素）</h3>
+        <a href="javascript:void(0)" class="btn btn-sm btn-default m-l-20 m-b-10" id="open2">打 开</a>
+        <div class="by-code">
+          <ul>
+            <li class="on"><span>Html</span>
+              <div class="by-code-box">没有dome 元素</div>
+            </li>
+            <li><span>Javascript</span>
+              <div class="by-code-box">
+                <p>var&#32;opt&#32;=&#32;$('&lt;div&gt;').modal(),<br>
+                  <br>
+                  &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;addBtn&#32;=&#32;$('&lt;a&#32;href="javascript:void(0)"&#32;class="btn&#32;btn-md&#32;btn-default"&gt;添&#32;加&lt;/a&gt;'),<br>
+                  <br>
+                  &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;deleteBtn&#32;=&#32;$('&lt;a&#32;href="javascript:void(0)"&#32;class="btn&#32;btn-md&#32;btn-default-alt"&#32;data-role="close"&gt;删&#32;除&lt;/a&gt;');<br>
+                  <br>
+                  $('#open2').click(function&#32;()&#32;{<br>
+                  <br>
+                  &#32;&#32;&#32;&#32;opt.modal('show')<br>
+                  <br>
+                  &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.modal('title',&#32;'我是第二个标题')<br>
+                  <br>
+                  &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.modal('load',&#32;'modalData.html')<br>
+                  <br>
+                  &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.modal('title',&#32;'我是第二个标题')<br>
+                  <br>
+                  &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;.modal('button',&#32;[addBtn,&#32;deleteBtn])<br>
+                  <br>
+                  }) </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="panel">
+        <h3 class="panel-title">modal API</h3>
+        <div class="by-callout">
+          <h4>属性：<br/>
+          </h4>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-dom m-t-10 m-b-10">
+            <tr>
+              <th width="15%" rowspan="3" scope="row">size: 'modal 尺寸'</th>
+              <td width="10%">'lg'</td>
+              <td>中等尺寸 900px * 600px ，例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1).modal({ </P>
+                  <p class="indent2"> size:'lg' </p>
+                  <p> })</P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <td>'md'</td>
+              <td><strong>默认</strong> 大尺寸 600px * 320px ，例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1).modal() </P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <td>'sm'</td>
+              <td>小尺寸 600px * 100px ，例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1).modal({ </P>
+                  <p class="indent2"> size:'sm' </p>
+                  <p> }) </P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <th width="15%" scope="row">load</th>
+              <td width="10%">'url'</td>
+              <td>请求数据 ，例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1).modal({ </P>
+                  <p class="indent2"> url:'modalData.html' </p>
+                  <p> })</P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <th scope="row">内部私有方法</th>
+              <td colspan="2">添加 [data-role=close] 属性 可触发关闭事件</td>
+            </tr>
+          </table>
+          <h4>方法：</h4>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-dom m-t-10 m-b-10">
+            <tr>
+              <th scope="row">'load'</th>
+              <td>调用 load 方法，参数（url,params,fn）例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1').modal('load','list.html','这里是传递的内容')</P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <th scope="row" width="15%">'show'</th>
+              <td>调用 show 方法，显示 ，例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1').modal('show')</P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <th scope="row">'hide'</th>
+              <td>调用 hide 方法，隐藏</td>
+            </tr>
+            <tr>
+              <th scope="row">'title'</th>
+              <td>调用 title 方法，参数（title）例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P> $('#modal1').modal('title');</P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <th scope="row">'body'</th>
+              <td>调用 body 方法，参数（body）例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P> $('#modal1').modal('body');</P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <th scope="row">'button'</th>
+              <td>调用 button 方法，参数（button）例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P> $('#modal1').modal('button');</P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <th scope="row">'clear'</th>
+              <td>调用 clear 方法，清空页面主体元素</td>
+            </tr>
+          </table>
+          <h4>事件：</h4>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-dom m-t-10 m-b-10">
+            <tr>
+              <th width="15%" rowspan="2" scope="row">show 方法</th>
+              <td width="10%">show</td>
+              <td>在打开之前触发 show 事件 ，例如：
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1').modal().on('show',function(){</p>
+                  <p class="indent2">console.info("---打开之后")</p>
+                  <p> }) </P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+            <tr>
+              <td>shown</td>
+              <td>在打开之后触发 shown 事件</td>
+            </tr>
+            <tr>
+              <th width="15%" rowspan="2" scope="row">hide 方法</th>
+              <td width="10%">hide</td>
+              <td>在关闭之前触发 hide 事件</td>
+            </tr>
+            <tr>
+              <td>hidden</td>
+              <td>在关闭之后触发 hidden 事件</td>
+            </tr>
+            <tr>
+              <th width="15%" rowspan="2" scope="row">load 方法</th>
+              <td width="10%">load</td>
+              <td>在load之前触发 load 事件</td>
+            </tr>
+            <tr>
+              <td>done</td>
+              <td>在load之后触发 done 事件，例如
+                <div class="by-code-example">
+                  <P>...</P>
+                  <P>$('#modal1').modal('load','list.html').on(done,function(data){</p>
+                  <p class="indent2">console.info("---打开之后")</p>
+                  <p> }) </P>
+                  <P>...</P>
+                </div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<div class="foot">2015-12 © 2016-12 Modern by Banying. 『The youth waystation, the dream began here!』</div>
+<div class="skin"><i class="demo-icon icon-cog">&#xe8a1;</i>
+  <p><span id="skinRed">pink</span><span id="skinBlue">blue</span><span id="skinGreen">green</span></p>
+</div>
+<!---外部插件---> 
+<script src="../../resources/js/lib/jquery/jquery-1.8.3.js"></script> 
+<script src="../../resources/js/lib/less/less.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.with-mousewheel.min.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfectScrollbar.js"></script> 
+<script src="../../resources/js/lib/handerbars/handlebars-v2.0.0.js"></script> 
+<script src="../../resources/js/lib/jqueryUI/jquery-ui.js"></script> 
+<!--模板数据--> 
+<script src="../../resources/js/common/listTemp.js"></script> 
+<!---页面共通脚本---> 
+<script src="../../resources/js/common/skin.js"></script> 
+<script src="../../resources/js/common/menu.js"></script> 
+<script>
+$(function() {
+    //消息提醒数据
+    ListTemp($('#newsListId'), $('#newsList'), 10);
+
+});
+</script> 
+<!-- InstanceBeginEditable name="footjs" --> 
+<script src="Jquery.modal.js"></script> 
+<script src="../../resources/js/common/wgt.js"></script> 
+<script>
+    $(function () {
+        //菜单
+        menuFoc("#menu", 1, 0);
+
+
+        //modal
+
+        var sureBtn = $('<a href="javascript:void(0)" class="btn btn-md btn-default">保 存</a>'),
+
+                cancelBtn = $('<a href="javascript:void(0)" class="btn btn-md btn-default-alt" data-role="close">取 消</a>');
+
+        $('#modal1').modal({
+
+            title: '我是标题',
+
+            //此处 url 不起作用
+
+            url: 'modalData.html'
+
+
+        })
+                .on('shown',
+
+                function () {
+
+                    console.info("打开之后---")
+
+                })
+
+                .on('show',
+
+                function () {
+
+                    console.info("打开之前---")
+
+                })
+                .on('hidden',
+
+                function () {
+
+                    console.info("关闭之后------")
+
+                })
+
+                .on('hide',
+
+                function () {
+
+                    console.info("------关闭之前")
+
+                })
+
+        $('#open1').click(function () {
+
+            $('#modal1').modal('button', [sureBtn, cancelBtn])
+
+                    .modal('show')
+
+
+        });
+
+
+        var opt = $('<div>').modal(),
+
+                addBtn = $('<a href="javascript:void(0)" class="btn btn-md btn-default">添 加</a>'),
+
+                deleteBtn = $('<a href="javascript:void(0)" class="btn btn-md btn-default-alt" data-role="close">删 除</a>');
+
+        $('#open2').click(function () {
+
+            opt.modal('show')
+
+                    .modal('title', '我是第二个标题')
+
+                    .modal('load', 'modalData.html')
+
+                    .modal('title', '我是第二个标题')
+
+                    .modal('button', [addBtn, deleteBtn])
+
+        })
+
+    })
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

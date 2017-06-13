@@ -1,0 +1,430 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/common.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>时间控件</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet/less"   href="../../resources/less/skin/value_blue.less"  id="less_file"/>
+<link rel="stylesheet" href="../../resources/css/common/layout.css">
+<link rel="stylesheet" href="../../resources/css/common/fonts.css">
+<link rel="stylesheet" href="../../resources/css/common/header.css">
+<link rel="stylesheet" href="../../resources/css/common/menu.css">
+<link rel="stylesheet" href="../../resources/css/common/content.css">
+<link rel="stylesheet" href="../../resources/css/common/wgt.css">
+<!-- 外部引用样式-->
+<link rel="stylesheet" type="text/css" href="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.css">
+<!-- InstanceBeginEditable name="head" -->
+
+<link rel="stylesheet" type="text/css" href="jquery-ui-time.css">
+<link rel="stylesheet" type="text/css" href="../../UI/button-and-form/button-and-form.css">
+<style>
+.panel { height: 200px; }
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<header class="header darker-background">
+  <h1><img src="../../resources/images/common/logo.png"></h1>
+  <div class="menu-icon"><span></span></div>
+  <div class="user"><img src="../../resources/images/common/usre.jpg"> 您好！admin
+    <div class="user-box">
+      <P>用户名：admin</P>
+      <P>上次登录时间：<span>2015-12-15  18:21:15</span></P>
+      <P>登录IP：<span>172.166.201.122</span></P>
+      <P><a href="#"><i class="icon-prev"></i>用户注销</a></P>
+    </div>
+  </div>
+  <div class="remind"><i class="demo-icon icon-bell-alt" id="newsClick">&#xe874;</i><strong></strong> </div>
+  <div class="remind"><i class="demo-icon icon-mail-alt" id="emailClick">&#xe826;</i><strong></strong>
+    <div class="remind-box" id="newsEle">
+      <p class="remind-box-title">您有<span>0</span>条站内信</p>
+      <div class="remind-box-main PerfectScrollbar">
+        <div class="p-5">
+          <ul class="remind-box-list" id="newsList">
+            <script id="newsListId" type="text/x-handlebars-template">
+              {{#each list}}
+               <li><a href="#">查看</a>恭喜您，您的密码修改成功</li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="remind-more">+ 查看更多</a> </div>
+  </div>
+  <div class="header-search">
+    <input name="" type="text">
+    <a href="javascript:void(0)" class="demo-icon icon-zoom-in" title="搜索">&#xf087;</a></div>
+</header>
+<menu class="menu">
+  <div class="menu-box PerfectScrollbar">
+    <div class="menu-con">
+      <ul class="left-nav" id="menu">
+        <li> <a href="javascript:void(0)" class="level-one level-one-foc" title="首页"><i class="demo-icon icon-home-1">&#xea8a;</i>首页</a> </li>
+        <li><a href="javascript:void(0)" class="level-one" title="功能组件"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> 功能组件</a>
+          <ul>
+            <li><a href="../modal/modal.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>模态框</a></li>
+            <li><a href="../message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>提示框</a></li>
+            <li><a href="../message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>下拉框</a></li>
+            <li><a href="../message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>进度条</a></li>
+            <li><a href="timepicker.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>时间控件</a></li>
+            <li><a href="../selectUI/selectable.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>左右互选</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)" class="level-one" title="UI界面"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> UI 界面</a>
+          <ul>
+            <li><a href="../../UI/button-and-form/button-and-form.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>按钮与表单</a></li>
+            <li><a href="../../UI/table/table.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>表格</a></li>
+            <li><a href="../../UI/card/card.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>卡片</a></li>
+            <li><a href="../../UI/font/font.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>字体库</a></li>
+            <li><a href="../../UI/list/list.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>数据统计</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</menu>
+<div class="content" ><!-- InstanceBeginEditable name="contenter" -->
+  <h2 class="page-title">时间控件 Timepicker</h2>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel" style="height:400px;">
+        <h3 class="panel-title">内联显示</h3>
+        <div class=" m-l-20 m-b-10">
+          <div id="datepicker4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-12 col-sm-12">
+      <div class="panel" style="height:400px;">
+        <h3 class="panel-title">内联显示多个月份</h3>
+        <div class=" m-l-20 m-b-10">
+          <div id="datepicker6b"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="padding-bottom:60px;">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">默认日期样式</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="testForm" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker1">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">动画功能</h3>
+        <div class=" m-l-20 m-b-10 clear">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker2">
+        </div>
+        <div class=" m-l-20 m-b-10">
+          <select name=""  id="anim" class="select">
+            <option value="show">Show (默认)</option>
+            <option value="slideDown">滑下</option>
+            <option value="fadeIn">淡入</option>
+            <option value="blind">Blind (UI 百叶窗特效)</option>
+            <option value="bounce">Bounce (UI 反弹特效)</option>
+            <option value="clip">Clip (UI 剪辑特效)</option>
+            <option value="drop">Drop (UI 降落特效)</option>
+            <option value="fold">Fold (UI 折叠特效)</option>
+            <option value="slide">Slide (UI 滑动特效)</option>
+            <option value="">无</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">显示按钮</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker3">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">年份、月份选择</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker5">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">显示多个月份</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker6a">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">格式化日期</h3>
+        <div class="m-l-20 m-b-10">
+          <select name=""  id="format"  class="select">
+            <option value="show">Show (默认)</option>
+            <option value="mm/dd/yy">Default - mm/dd/yy</option>
+            <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
+            <option value="d M, y">Short - d M, y</option>
+            <option value="d MM, y">Medium - d MM, y</option>
+            <option value="DD, d MM, yy">Full - DD, d MM, yy</option>
+            <option value="&apos;day&apos; d &apos;of&apos; MM &apos;in the year&apos; yy">With text - 'day' d 'of' MM 'in the year' yy</option>
+          </select>
+        </div>
+        <div class=" m-l-20 m-b-10 ">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker7">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">时、分、秒显示</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker8">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">图标触发器</h3>
+        <div class=" m-l-20 m-b-10">
+          <div class="date-icon col-sm-5">
+            <input name="" type="text" class="input-box col-sm-12" placeholder="请选择日期" id="datepicker9">
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+	 .date-icon{ position:relative;}
+	 .ui-datepicker-trigger{ position:absolute; top:21px; right:20px; cursor:pointer;}
+	</style>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">填充另一个输入框</h3>
+        <div class=" m-l-20 m-b-10 clear">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker10">
+        </div>
+        <div class="m-l-20 m-b-10 clear">
+          <input name="" type="text" class="input-box  col-sm-5"  id="alternate">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">限制日期范围</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker11">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">选择日期范围</h3>
+        <div class=" m-l-20 m-b-10">
+          <input class="input-box  col-sm-5"  type="text" id="from" name="from" placeholder="开始时间">
+      <span class="col-sm-1 text-algin-m"> - </span>
+          <input class="input-box  col-sm-5"  type="text" id="to" name="to" placeholder="结束时间">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">显示周</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker13">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">只显示时间</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker14" >
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">显示时分秒毫秒格式</h3>
+        <div class=" m-l-20 m-b-10">
+          <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker15" >
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="panel">
+        <h3 class="panel-title">数据提交</h3>
+        <div class=" m-l-20 m-b-10 clear">
+          <form id="testFrom" name="testForm" action="http://localhost:29999/index.html"  method="post">
+            <input name="" type="text" class="input-box  col-sm-5" placeholder="请选择日期" id="datepicker16" >
+          </form>
+        </div>
+        <div class=" m-l-20">
+          <button class="btn btn-sm btn-default" id="sure">提 交</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<div class="foot">2015-12 © 2016-12 Modern by Banying. 『The youth waystation, the dream began here!』</div>
+<div class="skin"><i class="demo-icon icon-cog">&#xe8a1;</i>
+  <p><span id="skinRed">pink</span><span id="skinBlue">blue</span><span id="skinGreen">green</span></p>
+</div>
+<!---外部插件---> 
+<script src="../../resources/js/lib/jquery/jquery-1.8.3.js"></script> 
+<script src="../../resources/js/lib/less/less.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.with-mousewheel.min.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfectScrollbar.js"></script> 
+<script src="../../resources/js/lib/handerbars/handlebars-v2.0.0.js"></script> 
+<script src="../../resources/js/lib/jqueryUI/jquery-ui.js"></script> 
+<!--模板数据--> 
+<script src="../../resources/js/common/listTemp.js"></script> 
+<!---页面共通脚本---> 
+<script src="../../resources/js/common/skin.js"></script> 
+<script src="../../resources/js/common/menu.js"></script> 
+<script>
+$(function() {
+    //消息提醒数据
+    ListTemp($('#newsListId'), $('#newsList'), 10);
+
+});
+</script> 
+<!-- InstanceBeginEditable name="footjs" --> 
+<script src="jquery-ui-timepicker-addon.js"></script> 
+<script src="jquery-ui-timepicker-zh-CN.js"></script> 
+<script>
+    $(function() {
+        //菜单
+        menuFoc("#menu", 1, 1);
+        //一、默认功能
+        $('#datepicker1').datepicker();
+        //二、动画功能
+        $("#datepicker2").datepicker();
+		  //调用时写法  $( "#datepicker2" ).datepicker( "option", "showAnim", "bounce" );
+        $("#anim").change(function() {
+            $("#datepicker2").datepicker("option", "showAnim", $(this).val());
+        });
+		 //三、显示按钮
+        $("#datepicker3").datepicker({
+            showButtonPanel: true
+        });
+        //var datepicker_CurrentInput;  
+        //    $.datepicker.setDefaults({ showButtonPanel: true, closeText: '清除', beforeShow: function (input, inst) { datepicker_CurrentInput = input; } });  
+        //  $(".ui-datepicker-close").live("click", function (){  
+        //      datepicker_CurrentInput.value = "";  
+        //  }); 添加清除按钮	
+        //四、内联显示
+        $("#datepicker4").datepicker({
+            showButtonPanel: true,
+        });
+        //五、年份、月份选择
+        $("#datepicker5").datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+        //六、显示多个月份
+        $("#datepicker6a").datepicker({
+            numberOfMonths: 2,
+            showButtonPanel: true
+        });
+        $("#datepicker6b").datepicker({
+            numberOfMonths: 3,
+            showButtonPanel: true
+        });
+        //七、格式化日期
+        $("#datepicker7").datepicker();
+        $("#format").change(function() {
+            $("#datepicker7").datepicker("option", "dateFormat", $(this).val());
+        });
+        //八、时、分、秒显示
+        $("#datepicker8").datetimepicker({
+            timeFormat: 'hh：mm',
+            dateFormat: "yy年mm月dd日"
+            });
+
+        //九、图标触发器
+        $("#datepicker9").datepicker({
+            showOn: "button",
+            buttonImage: "time_icon.jpg",
+            buttonImageOnly: true
+        });
+        //十、填充另一个输入框
+        $("#datepicker10").datepicker({
+            altField: "#alternate",
+            altFormat: "DD, d MM, yy"
+        });
+        //十一、限制日期范围
+        $("#datepicker11").datepicker({
+            minDate: -20,
+            maxDate: "+1M +10D"
+        });
+        //十二、选择日期范围
+        $("#from").datepicker({
+            defaultDate: "",
+            //默认当前时间
+            onClose: function(selectedDate) {
+                $("#to").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#to").datepicker({
+            defaultDate: "+1w",
+            //默认当前时间加1周【也可以为"+1y-1m+1w+1d"或者"2011-03-10",y:年,m：月,w:周,d:日】
+            onClose: function(selectedDate) {
+                $("#from").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+        //十三、显示周
+        $("#datepicker13").datepicker({
+            showWeek: true,
+            firstDay: 1
+        });
+        //十四、只显示时间
+        $("#datepicker14").timepicker({
+            startView: 'day',
+            timeFormat: 'hh-mm'
+        });
+        //十五、显示时分秒毫秒格式
+        $("#datepicker15").timepicker({
+            startView: 'day',
+            showSecond: true,
+            showMillisec: true,
+            timeFormat: 'hh-mm-ss-l'
+        });
+		//十六、数据提交
+		 $('#datepicker16').datepicker();
+        $('#ui-datepicker-div').hide();
+    });
+</script> 
+<script>
+    $(function() {
+      
+		
+		$('#sure').click(function(){
+		postdata()
+			
+		});
+    });
+	function postdata() {
+    var time = $("#datepicker16").val();
+    $.ajax({
+        cache: true,
+        type: "get",
+		url:"",
+        data: {
+            "MyTime": time
+        },
+        success: function(data) {
+            alert("数据提交成功:" + time);
+        },
+        error: function(data) {
+            alert("fail");
+
+        }
+    });
+}
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

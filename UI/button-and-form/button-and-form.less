@@ -1,0 +1,158 @@
+/******* UI 按钮 *******/
+.btn-default {
+  border-color: @default;
+  background: @default;
+  color: #fff;
+}
+
+.btn-default-alt {
+  border-color: @default;
+  background: #fff;
+  color: @default
+}
+
+.btn-default i[class*="demo-icon"] {
+  color: #fff;
+}
+
+.btn-default-alt i[class*="demo-icon"] {
+  color: @default
+}
+
+.btn-greay {
+  border-color: @grey;
+  background: @grey;
+  color: #fff;
+}
+
+.btn-greay-alt {
+  border-color: @grey;
+  border: solid 1px @grey;
+  background: #fff;
+  color: @grey
+}
+
+.link-default {
+  color: @default
+}
+
+.link-default:hover {
+  color: @default - #3F3F3F
+}
+
+/******* UI 表单 *******/
+.input-box, .textarea-box, .select {
+  border: solid 1px @greyLight;
+
+}
+
+.input-box[disabled], .textarea-box[disabled], .select[disabled] {
+  background: @greyLighter;
+
+}
+
+.input-box:focus, .textarea-box:focus, .select:focus {
+  border: solid 1px @default;
+  box-shadow: 0 0 10px -2px @default;
+}
+
+input.error {
+  border: solid 1px red;
+  box-shadow: 0 0 10px -2px red;
+}
+
+label.error {
+
+  color: red;
+}
+
+label.error i {
+
+  color: red;
+}
+
+.form-box + .check-box-btn, .form-box + .radio-box-btn {
+  border: solid 2px @greyLight;
+}
+
+.form-box[disabled] + .check-box-btn, .form-box[disabled] + .radio-box-btn {
+  border: solid 2px @greyLight;
+  background: @greyLight;
+}
+
+.form-box:checked + .check-box-btn, .form-box:checked + .radio-box-btn {
+  border: solid 2px @default;
+}
+
+.form-box:checked + .check-box-btn:after {
+  color: @default;
+}
+
+.form-box:checked + .radio-box-btn:after {
+  background: @default;
+}
+
+.form-box + .check-tab-btn, .form-box + .radio-tab-btn {
+  border: solid 1px @default - #222;
+}
+
+.form-box + .check-tab-btn:after, .form-box + .radio-tab-btn:after {
+  color: @default;
+}
+
+.form-box:checked + .check-tab-btn:after, .form-box:checked + .radio-tab-btn:after {
+  background: @default;
+  color: #fff;
+}
+
+.form-box[disabled] + .check-tab-btn, .form-box[disabled] + .radio-tab-btn {
+  border: solid 1px @grey;
+}
+
+.form-box[disabled] + .check-tab-btn:after, .form-box[disabled] + .radio-tab-btn:after {
+  background: @grey;
+  color: #fff;
+}
+
+/* 开关键 */
+.form-box + .on-off-A {
+  border: solid 1px @grey;
+}
+
+.form-box + .on-off-A:after {
+  background: @grey;
+}
+
+.form-box:checked + .on-off-A {
+  border: solid 1px @default;
+}
+
+.form-box:checked + .on-off-A:after {
+  background: @default;
+}
+
+.form-box + .on-off-B {
+  background: @grey;
+}
+
+.form-box + .on-off-B:after,
+.form-box + .on-off-B:before {
+  color: #fff;
+}
+
+.form-box:checked + .on-off-B {
+  background: @default;
+}
+
+.form-box + .on-off-C:after,
+.form-box + .on-off-C:before {
+  color: #fff;
+}
+
+.form-box + .on-off-C:after {
+  background: @grey;
+}
+
+.form-box + .on-off-C:before {
+  background: @default;
+}

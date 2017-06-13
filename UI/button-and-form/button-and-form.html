@@ -1,0 +1,259 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/common.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>按钮</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet/less"   href="../../resources/less/skin/value_blue.less"  id="less_file"/>
+<link rel="stylesheet" href="../../resources/css/common/layout.css">
+<link rel="stylesheet" href="../../resources/css/common/fonts.css">
+<link rel="stylesheet" href="../../resources/css/common/header.css">
+<link rel="stylesheet" href="../../resources/css/common/menu.css">
+<link rel="stylesheet" href="../../resources/css/common/content.css">
+<link rel="stylesheet" href="../../resources/css/common/wgt.css">
+<!-- 外部引用样式-->
+<link rel="stylesheet" type="text/css" href="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="button-and-form.css">
+<style>
+.panel { min-height: 320px; }
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<header class="header darker-background">
+  <h1><img src="../../resources/images/common/logo.png"></h1>
+  <div class="menu-icon"><span></span></div>
+  <div class="user"><img src="../../resources/images/common/usre.jpg"> 您好！admin
+    <div class="user-box">
+      <P>用户名：admin</P>
+      <P>上次登录时间：<span>2015-12-15  18:21:15</span></P>
+      <P>登录IP：<span>172.166.201.122</span></P>
+      <P><a href="#"><i class="icon-prev"></i>用户注销</a></P>
+    </div>
+  </div>
+  <div class="remind"><i class="demo-icon icon-bell-alt" id="newsClick">&#xe874;</i><strong></strong> </div>
+  <div class="remind"><i class="demo-icon icon-mail-alt" id="emailClick">&#xe826;</i><strong></strong>
+    <div class="remind-box" id="newsEle">
+      <p class="remind-box-title">您有<span>0</span>条站内信</p>
+      <div class="remind-box-main PerfectScrollbar">
+        <div class="p-5">
+          <ul class="remind-box-list" id="newsList">
+            <script id="newsListId" type="text/x-handlebars-template">
+              {{#each list}}
+               <li><a href="#">查看</a>恭喜您，您的密码修改成功</li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="remind-more">+ 查看更多</a> </div>
+  </div>
+  <div class="header-search">
+    <input name="" type="text">
+    <a href="javascript:void(0)" class="demo-icon icon-zoom-in" title="搜索">&#xf087;</a></div>
+</header>
+<menu class="menu">
+  <div class="menu-box PerfectScrollbar">
+    <div class="menu-con">
+      <ul class="left-nav" id="menu">
+        <li> <a href="javascript:void(0)" class="level-one level-one-foc" title="首页"><i class="demo-icon icon-home-1">&#xea8a;</i>首页</a> </li>
+        <li><a href="javascript:void(0)" class="level-one" title="功能组件"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> 功能组件</a>
+          <ul>
+            <li><a href="../../UE/modal/modal.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>模态框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>提示框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>下拉框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>进度条</a></li>
+            <li><a href="../../UE/timepicker/timepicker.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>时间控件</a></li>
+            <li><a href="../../UE/selectUI/selectable.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>左右互选</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)" class="level-one" title="UI界面"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> UI 界面</a>
+          <ul>
+            <li><a href="button-and-form.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>按钮与表单</a></li>
+            <li><a href="../table/table.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>表格</a></li>
+            <li><a href="../card/card.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>卡片</a></li>
+            <li><a href="../font/font.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>字体库</a></li>
+            <li><a href="../list/list.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>数据统计</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</menu>
+<div class="content" ><!-- InstanceBeginEditable name="contenter" -->
+  <h2 class="page-title">UI 界面按钮 Button</h2>
+  <div class="row">
+    <div class="col-lg-4 col-md-12">
+      <div class="panel">
+        <h3 class="panel-title">按钮样式</h3>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-sm btn-default">按 钮</a><span>class：btn btn-sm btn-default</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-sm btn-default-alt">按 钮</a><span>class：btn btn-sm btn-default-alt</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-sm btn-greay">按 钮</a><span>class：btn btn-sm btn-greay</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-sm btn-greay-alt">按 钮</a><span>class：btn btn-sm btn-greay-alt</span> </div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="link-default">文字链接</a><span class="m-l-10">class：link-default</span> </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <div class="panel">
+        <h3 class="panel-title">按钮大小</h3>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-xs btn-default">按钮</a><span>class：btn btn-xs btn-default</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-sm btn-default">按 钮</a><span>class：btn btn-sm btn-default</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-md btn-default">按 钮</a><span>class：btn btn-md btn-default</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-lg btn-default">按 钮</a><span>class：btn btn-lg btn-default</span> </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <div class="panel">
+        <h3 class="panel-title">按钮图标</h3>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-xs btn-default" title="删除"><i class="demo-icon icon-trash">&#xe88b;</i></a><span>class：btn btn-xs btn-default</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-xs btn-default-alt"  title="删除"><i class="demo-icon icon-trash">&#xe88b;</i></a><span>class：btn btn-xs btn-default-alt</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-sm btn-default"><i class="demo-icon icon-plus">&#xe845;</i> 按 钮</a><span>class：btn btn-sm btn-default</span></div>
+        <div class="panel-dom clear"> <a href="javascript:void(0)" class="btn btn-sm btn-default-alt"><i class="demo-icon icon-plus">&#xe845;</i> 按 钮</a><span>class：btn btn-sm btn-default-alt</span></div>
+      </div>
+    </div>
+  </div>
+  <h2 class="page-title">UI 界面表单 form</h2>
+  <div class="row" style="padding-bottom:60px;">
+    <div class="col-md-6 col-sm-12">
+      <div class="panel" style="min-height:620px;">
+        <h3 class="panel-title">表单样式</h3>
+        <div class="panel-dom clear">
+          <input name="testForm" type="text" class="input-box col-sm-5" placeholder="请输入内容">
+        </div>
+        <div  class="panel-dom clear">class="input-box"</div>
+        <div class="panel-dom clear">
+          <textarea name="" cols="" rows="" class="textarea-box col-sm-5" placeholder="请输入内容"></textarea>
+        </div>
+        <div  class="panel-dom clear">class="textarea-box"</div>
+        <div class="panel-dom">
+          <select class="select">
+            <option value="show" selected>请选择</option>
+            <option value="slideDown">滑下</option>
+            <option value="fadeIn">淡入</option>
+            <option value="blind">Blind (UI 百叶窗特效)</option>
+            <option value="bounce">Bounce (UI 反弹特效)</option>
+            <option value="clip">Clip (UI 剪辑特效)</option>
+            <option value="drop">Drop (UI 降落特效)</option>
+            <option value="fold">Fold (UI 折叠特效)</option>
+            <option value="slide">Slide (UI 滑动特效)</option>
+          </select>
+        </div>
+        <div  class="panel-dom clear">class="select"</div>
+        <div class="panel-dom clear">
+          <input name="" type="text" class="input-box col-sm-5 error" placeholder="请输入内容">
+          <label class="error left" style="display:block;"><i class="demo-icon icon-info-circled"></i>你输入的内容有误 class='error'</label>
+        </div>
+        <div  class="panel-dom clear">class="input-box error"</div>
+        <div class="panel-dom clear">
+          <input name="" type="text" class="input-box col-sm-5" placeholder="禁止使用" disabled>
+        </div>
+        <div  class="panel-dom clear">disabled</div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="panel" style="min-height:620px;">
+        <h3 class="panel-title">表单选项</h3>
+        <div class="panel-dom clear"><span class="left">默认复选框：</span>
+          <input type="checkbox" id="group1_1" name="group1" class="form-box" checked  />
+          <label for="group1_1" class="check-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">复选1</span>
+          <input type="checkbox" name="group1" id="group1_2" class="form-box"/>
+          <label for="group1_2" class="check-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">复选2</span>
+          <input type="checkbox" name="group1" id="group1_3"  class="form-box"/>
+          <label for="group1_3" class="check-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">复选3</span>
+          <input type="checkbox" name="group1" id="group1_4"  class="form-box" disabled/>
+          <label for="group1_4" class="check-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">复选4</span> </div>
+        <div  class="panel-dom clear">class="check-box-btn"</div>
+        <div class="panel-dom clear"><span class="left">默认单选按钮组：</span>
+          <input name="group2" type="radio" id="group2_1"  class="form-box" checked/>
+          <label for="group2_1" class="radio-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">单选1</span>
+          <input name="group2" type="radio" id="group2_2"  class="form-box" />
+          <label for="group2_2" class="radio-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">单选2</span>
+          <input name="group2" type="radio" id="group2_3"  class="form-box" />
+          <label for="group2_3" class="radio-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">单选3</span>
+          <input name="group2" type="radio" id="group2_4"  class="form-box"  disabled/>
+          <label for="group2_4" class="radio-box-btn left"></label>
+          <span class="left m-l-10 m-r-10">单选4</span> </div>
+        <div  class="panel-dom clear">class="radio-box-btn"</div>
+        <div class="panel-dom clear"><span class="left">选项卡复选框：</span>
+          <input type="checkbox" id="group3_1" name="group3" class="form-box" checked  />
+          <label for="group3_1" class="check-tab-btn left" data-tg='复选1'></label>
+          <input type="checkbox" name="group3" id="group3_2" class="form-box"/>
+          <label for="group3_2" class="check-tab-btn left" data-tg='复选2'></label>
+          <input type="checkbox" name="group3" id="group3_3"  class="form-box"/>
+          <label for="group3_3" class="check-tab-btn left" data-tg='复选3'></label>
+          <input type="checkbox" name="group3" id="group3_4"  class="form-box" disabled/>
+          <label for="group3_4" class="check-tab-btn left" data-tg='复选4'></label>
+        </div>
+        <div  class="panel-dom clear">class="check-tab-btn"</div>
+        <div class="panel-dom clear"><span class="left">选项卡单选按钮：</span>
+          <input name="group4" type="radio" id="group4_1"  class="form-box" checked/>
+          <label for="group4_1" class="radio-tab-btn left"  data-tg='单选1'></label>
+          <input name="group4" type="radio" id="group4_2"  class="form-box" />
+          <label for="group4_2" class="radio-tab-btn left"  data-tg='单选2'></label>
+          <input name="group4" type="radio" id="group4_3"  class="form-box" />
+          <label for="group4_3" class="radio-tab-btn left"  data-tg='单选3'></label>
+          <input name="group4" type="radio" id="group4_4"  class="form-box"  disabled/>
+          <label for="group4_4" class="radio-tab-btn left"  data-tg='单选4'></label>
+        </div>
+        <div  class="panel-dom clear">class="radio-tab-btn"</div>
+        <div class="panel-dom clear"><span class="left">开关键A：</span>
+          <input type="checkbox" id="group5_1" name="group5" class="form-box"  />
+          <label for="group5_1" class="on-off-A left"></label>
+           <div  class="left m-l-20">class="on-off-A"</div>
+        </div>
+        <div class="panel-dom clear"><span class="left m-r-10">开关键B：</span>
+          <input type="checkbox" id="group6_1" name="group6" class="form-box"  />
+          <label for="group6_1" class="on-off-B left" data-tg-on="ON" data-tg-off="OFF"></label>
+          <div  class="left m-l-20">class="on-off-B"</div>
+        </div>
+        <div class="panel-dom clear"><span class="left m-r-10">开关键C：</span>
+          <input type="checkbox" id="group7_1" name="group7" class="form-box"  />
+          <label for="group7_1" class="on-off-C left" data-tg-on="ON" data-tg-off="OFF"></label>
+           <div  class="left m-l-20">class="on-off-C"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<div class="foot">2015-12 © 2016-12 Modern by Banying. 『The youth waystation, the dream began here!』</div>
+<div class="skin"><i class="demo-icon icon-cog">&#xe8a1;</i>
+  <p><span id="skinRed">pink</span><span id="skinBlue">blue</span><span id="skinGreen">green</span></p>
+</div>
+<!---外部插件---> 
+<script src="../../resources/js/lib/jquery/jquery-1.8.3.js"></script> 
+<script src="../../resources/js/lib/less/less.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.with-mousewheel.min.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfectScrollbar.js"></script> 
+<script src="../../resources/js/lib/handerbars/handlebars-v2.0.0.js"></script> 
+<script src="../../resources/js/lib/jqueryUI/jquery-ui.js"></script> 
+<!--模板数据--> 
+<script src="../../resources/js/common/listTemp.js"></script> 
+<!---页面共通脚本---> 
+<script src="../../resources/js/common/skin.js"></script> 
+<script src="../../resources/js/common/menu.js"></script> 
+<script>
+$(function() {
+    //消息提醒数据
+    ListTemp($('#newsListId'), $('#newsList'), 10);
+
+});
+</script> 
+<!-- InstanceBeginEditable name="footjs" --> 
+<script>
+$(function(){
+	 //菜单
+        menuFoc("#menu", 2 ,0);
+	})
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

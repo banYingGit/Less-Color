@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+.content {
+	width: calc(100% - 260px);
+	min-height: calc(100% - 80px);
+	padding: 80px 0 0 260px;
+	transition: all .5s;
+}
+.content-sm {
+	width: 100%;
+	padding: 80px 0 0 0;
+}
+.page-title {
+	font-weight: lighter;
+	font-size: 20px;
+	margin: 10px 20px 0 20px;
+	height: 36px;
+	line-height: 36px;
+}
+.panel {
+	width: 100%;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+}
+.panel-title {
+	height: 18px;
+	padding: 25px 20px;
+	font-size: 18px;
+	font-weight: lighter;
+	line-height: 18px;
+}
+.panel-title i {
+	float: right;
+	font-size: 32px;
+	color: #999;
+	cursor: pointer;
+}
+.panel-dom { margin: 0 10px 20px 20px; }
+.panel-dom .btn { margin-right: 10px; }
+.foot {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index:2;
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+}

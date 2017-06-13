@@ -1,0 +1,174 @@
+@charset "utf-8";
+/*** 单选按钮 ***/
+.radio {
+	position: relative;
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin: 4px 10px 0 0;
+	border: solid 1px #ccc;
+	box-sizing: border-box;
+	border-radius: 50%;
+
+}
+.radio:checked:after {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #fff;
+	content: '';
+}
+.radio:hover {
+	border-style: solid;
+	border-width: 2px;
+}
+.radio:hover:after {
+	top: 3px;
+	left: 3px;
+}
+.radio:active { opacity: 0.75; }
+.radio:active:after {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #fff;
+	content: '';
+}
+.radio[disabled] { background: #ccc; }
+.radio[disabled]:hover { border-color: #ccc; }
+.radio[disabled]:active,
+.radio[disabled]:active:after {
+	background: #ccc;
+	opacity: 1;
+}
+/* 单选按钮皮肤 */
+.radio-default:hover { border-color: #0c61c6; }
+.radio-default:checked,
+.radio-default:active {
+	border-color: #0c61c6;
+	background: #0c61c6
+}
+.radio-yellow:hover { border-color: #ffb400; }
+.radio-yellow:checked,
+.radio-yellow:active {
+	border-color: #ffb400;
+	background: #ffb400
+}
+.radio-red:hover { border-color: #ff5956; }
+.radio-red:checked,
+.radio-red:active {
+	border-color: #ff5956;
+	background: #ff5956
+}
+.radio-green:hover { border-color: #00c565; }
+.radio-green:checked,
+.radio-green:active {
+	border-color: #00c565;
+	background: #00c565
+}
+/*** 开关键 ***/
+.switch {
+	position: relative;
+	display: block;
+	float: left;
+	width: 40px;
+	height: 20px;
+	padding: 2px;
+	margin: 4px 10px 0 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all .5S;
+	appearance: normal;
+	-webkit-appearance: none;
+}
+.switch:after {
+	position: relative;
+	left: 0;
+	display: block;
+	width: 50%;
+	height: 100%;
+	background: #fff;
+	box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.15);
+	content: '';
+	transition: all .5S;
+}
+.switch:checked:after { left: 50% }
+/* 开关键形状 */
+.switch-round {
+	border-radius: 10px;
+	background: #c8d2db;
+}
+.switch-round:after { border-radius: 50%; }
+.switch-square {
+	border-radius: 2px;
+	background: #c8d2db;
+}
+.switch-square:after { border-radius: 2px; }
+/* 开关键文字 */
+.switch-text { width: 60px; }
+.switch-text:after { width: 30%; }
+.switch-text:checked:after { left: 70% }
+.switch-text:before {
+	position: relative;
+	left: 30%;
+	display: block;
+	float: left;
+	width: 70%;
+	height: 100%;
+	font-size: 12px;
+	line-height: 18px;
+	color: #fff;
+	text-align: center;
+	content: attr(data-tg-off);
+	transition: all .5S;
+}
+.switch-text:checked:before {
+	left: 0;
+	content: attr(data-tg-on);
+}
+/* 开关键皮肤 */
+.switch-default:checked { background: #0c61c6; }
+.switch-red:checked { background: #ff5956; }
+.switch-yellow:checked { background: #ffb400; }
+.switch-green:checked { background: #00c565; }
+/* 开关键特殊形状 */
+.switch-special {
+	position: relative;
+	display: block;
+	float: left;
+	width: 40px;
+	height: 20px;
+	margin: 4px 10px 0 0;
+	cursor: pointer;
+	perspective: 900px;
+	appearance: normal;
+	-webkit-appearance: none;
+}
+.switch-special:after,
+.switch-special:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	content: '';
+	transition: all .5S;
+}
+.switch-special:after {
+	background: url(../../images/form/switchSpecialOff.png) center no-repeat;
+	transform: rotateY(-180deg);
+}
+.switch-special:before {
+	transform: rotateY(0deg);
+	background: url(../../images/form/switchSpecialOn.png) center no-repeat;
+}
+.switch-special:checked:after { transform: rotateY(0deg); }
+.switch-special:checked:before { transform: rotateY(180deg); }

@@ -1,0 +1,155 @@
+{  
+    "tableDataA":[
+        {
+            "id":"1-A",
+            "style":"table & table-line",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/1.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"2-A",
+            "style":"table & table-line",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/2.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"3-A",
+            "style":"table & table-line",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/3.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"4-A",
+            "style":"table & table-line",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/4.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        }
+    ],
+	
+    "tableDataB":[
+        {
+            "id":"1-B",
+            "style":"table & table-bor",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/1.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"2-B",
+            "style":"table & table-bor",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/2.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"3-B",
+            "style":"table & table-bor",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/3.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"4-B",
+            "style":"table & table-bor",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/4.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        }
+    ],
+	 "tableDataC":[
+        {
+            "id":"1-C",
+            "style":"table & table-line &  table-hover",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/1.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"2-C",
+            "style":"table & table-line &  table-hover",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/2.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"3-C",
+            "style":"table & table-line &  table-hover",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/3.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"4-C",
+            "style":"table & table-line &  table-hover",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/4.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='编辑'><i class='demo-icon icon-pencil'></i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        }
+    ],
+	
+    "tableDataD":[
+        {
+            "id":"1-D",
+            "style":"table & table-bor & table-active-odd",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/1.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"2-D",
+            "style":"table & table-bor  &  table-active-odd",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/2.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"3-D",
+            "style":"table & table-bor &  table-active-odd",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/3.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"4-D",
+            "style":"table & table-bor &  table-active-odd",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/4.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        }
+    ],
+	
+    "tableDataE":[
+        {
+            "id":"1-E",
+            "style":"table & table-bor & table-active-even & table-header",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/1.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"2-E",
+            "style":"table & table-bor  &  table-active-even & table-header",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/2.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"3-E",
+            "style":"table & table-bor &  table-active-even & table-header",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/3.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        },
+        {
+            "id":"4-E",
+            "style":"table & table-bor &  table-active-even & table-header",
+            "title":"这里是表格内容",
+            "img":"<img src='../../resources/images/mock_img/4.jpg' width='40' height='40'>",
+            "operation":"<a href='javascript:void(0)' class='btn btn-xs btn-default m-r-10' title='查看'><i class='demo-icon icon-eye-4'>&#xeddd;</i></a><a href='javascript:void(0)' class='btn btn-xs btn-default-alt' title='删除'><i class='demo-icon icon-trash'></i></a>"
+        }
+    ]
+}

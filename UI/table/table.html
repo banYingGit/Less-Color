@@ -1,0 +1,274 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/common.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>表格</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet/less"   href="../../resources/less/skin/value_blue.less"  id="less_file"/>
+<link rel="stylesheet" href="../../resources/css/common/layout.css">
+<link rel="stylesheet" href="../../resources/css/common/fonts.css">
+<link rel="stylesheet" href="../../resources/css/common/header.css">
+<link rel="stylesheet" href="../../resources/css/common/menu.css">
+<link rel="stylesheet" href="../../resources/css/common/content.css">
+<link rel="stylesheet" href="../../resources/css/common/wgt.css">
+<!-- 外部引用样式-->
+<link rel="stylesheet" type="text/css" href="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="table.css">
+<link rel="stylesheet" type="text/css" href="../button-and-form/button-and-form.css">
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<header class="header darker-background">
+  <h1><img src="../../resources/images/common/logo.png"></h1>
+  <div class="menu-icon"><span></span></div>
+  <div class="user"><img src="../../resources/images/common/usre.jpg"> 您好！admin
+    <div class="user-box">
+      <P>用户名：admin</P>
+      <P>上次登录时间：<span>2015-12-15  18:21:15</span></P>
+      <P>登录IP：<span>172.166.201.122</span></P>
+      <P><a href="#"><i class="icon-prev"></i>用户注销</a></P>
+    </div>
+  </div>
+  <div class="remind"><i class="demo-icon icon-bell-alt" id="newsClick">&#xe874;</i><strong></strong> </div>
+  <div class="remind"><i class="demo-icon icon-mail-alt" id="emailClick">&#xe826;</i><strong></strong>
+    <div class="remind-box" id="newsEle">
+      <p class="remind-box-title">您有<span>0</span>条站内信</p>
+      <div class="remind-box-main PerfectScrollbar">
+        <div class="p-5">
+          <ul class="remind-box-list" id="newsList">
+            <script id="newsListId" type="text/x-handlebars-template">
+              {{#each list}}
+               <li><a href="#">查看</a>恭喜您，您的密码修改成功</li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="remind-more">+ 查看更多</a> </div>
+  </div>
+  <div class="header-search">
+    <input name="" type="text">
+    <a href="javascript:void(0)" class="demo-icon icon-zoom-in" title="搜索">&#xf087;</a></div>
+</header>
+<menu class="menu">
+  <div class="menu-box PerfectScrollbar">
+    <div class="menu-con">
+      <ul class="left-nav" id="menu">
+        <li> <a href="javascript:void(0)" class="level-one level-one-foc" title="首页"><i class="demo-icon icon-home-1">&#xea8a;</i>首页</a> </li>
+        <li><a href="javascript:void(0)" class="level-one" title="功能组件"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> 功能组件</a>
+          <ul>
+            <li><a href="../../UE/modal/modal.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>模态框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>提示框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>下拉框</a></li>
+            <li><a href="../../UE/message/message.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>进度条</a></li>
+            <li><a href="../../UE/timepicker/timepicker.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>时间控件</a></li>
+            <li><a href="../../UE/selectUI/selectable.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>左右互选</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)" class="level-one" title="UI界面"><i class="demo-icon icon-cog-alt">&#xe8a0;</i> UI 界面</a>
+          <ul>
+            <li><a href="../button-and-form/button-and-form.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>按钮与表单</a></li>
+            <li><a href="table.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>表格</a></li>
+            <li><a href="../card/card.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>卡片</a></li>
+            <li><a href="../font/font.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>字体库</a></li>
+            <li><a href="../list/list.html"><i class="demo-icon icon-right-open-1">&#xeabe;</i>数据统计</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</menu>
+<div class="content" ><!-- InstanceBeginEditable name="contenter" -->
+  <h2 class="page-title">UI 界面表格 Table</h2>
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <div class="panel" style="height:400px;">
+        <h3 class="panel-title">下边线表格</h3>
+        <table width="95%" border="0" cellspacing="0" cellpadding="0"  class="table table-line">
+          <thead>
+            <tr>
+              <th width="10%" height="45">ID</th>
+              <th width="30%">样式</th>
+              <th width="25%">内容标题</th>
+              <th width="15%">图片</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="tableListA">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <div class="panel" style="height:400px;">
+        <h3 class="panel-title">全线表格</h3>
+        <table width="95%" border="0" cellspacing="0" cellpadding="0"  class="table table-bor">
+          <thead>
+            <tr>
+              <th width="10%" height="45">ID</th>
+              <th width="33%">样式</th>
+              <th width="25%">内容标题</th>
+              <th width="15%">图片</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="tableListB">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <div class="panel" style="height:400px;">
+        <h3 class="panel-title">鼠标滑过变色</h3>
+        <table width="95%" border="0" cellspacing="0" cellpadding="0"  class="table table-line table-hover">
+          <thead>
+            <tr>
+              <th width="10%" height="45">ID</th>
+              <th width="40%">样式</th>
+              <th width="18%">内容标题</th>
+              <th width="12%">图片</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="tableListC">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <div class="panel" style="height:400px;">
+        <h3 class="panel-title">各行变色-奇数行</h3>
+        <table width="95%" border="0" cellspacing="0" cellpadding="0"  class="table table-bor table-active-odd">
+          <thead>
+            <tr>
+              <th width="10%" height="45">ID</th>
+              <th width="40%">样式</th>
+              <th width="18%">内容标题</th>
+              <th width="12%">图片</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="tableListD">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="panel" style="height:400px; margin-bottom:60px;">
+        <h3 class="panel-title">表头变色 & 各行变色-奇数行</h3>
+        <table width="98%" border="0" cellspacing="0" cellpadding="0"  class="table table-bor table-active-even table-header">
+          <thead>
+            <tr>
+              <th width="7%" height="45">ID</th>
+              <th width="43%">样式</th>
+              <th width="18%">内容标题</th>
+              <th width="12%">图片</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="tableListE">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<div class="foot">2015-12 © 2016-12 Modern by Banying. 『The youth waystation, the dream began here!』</div>
+<div class="skin"><i class="demo-icon icon-cog">&#xe8a1;</i>
+  <p><span id="skinRed">pink</span><span id="skinBlue">blue</span><span id="skinGreen">green</span></p>
+</div>
+<!---外部插件---> 
+<script src="../../resources/js/lib/jquery/jquery-1.8.3.js"></script> 
+<script src="../../resources/js/lib/less/less.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfect-scrollbar.with-mousewheel.min.js"></script> 
+<script src="../../resources/js/lib/perfectScrollbar/perfectScrollbar.js"></script> 
+<script src="../../resources/js/lib/handerbars/handlebars-v2.0.0.js"></script> 
+<script src="../../resources/js/lib/jqueryUI/jquery-ui.js"></script> 
+<!--模板数据--> 
+<script src="../../resources/js/common/listTemp.js"></script> 
+<!---页面共通脚本---> 
+<script src="../../resources/js/common/skin.js"></script> 
+<script src="../../resources/js/common/menu.js"></script> 
+<script>
+$(function() {
+    //消息提醒数据
+    ListTemp($('#newsListId'), $('#newsList'), 10);
+
+});
+</script> 
+<!-- InstanceBeginEditable name="footjs" --> 
+<script>
+$(function() {
+    //菜单
+    menuFoc("#menu", 2, 1);
+	$.ajax({
+    type: "get",
+    url: 'table.json',
+    success: function(option) {
+       var optionValueA = option.tableDataA;
+       var tableContainA="";
+	   for(var i=0; i<optionValueA.length;i++){
+		   tableContainA+='<tr><td>' + optionValueA[i].id +'</td>';
+           tableContainA+='<td>' + optionValueA[i].style +'</td>';
+           tableContainA+='<td>' + optionValueA[i].title +'</td>';
+           tableContainA+='<td>' + optionValueA[i].img +'</td>';
+           tableContainA+='<td>' + optionValueA[i].operation +'</td></tr>';
+		   };
+		   $("#tableListA").html(tableContainA);
+	   var optionValueB = option.tableDataB;
+       var tableContainB="";
+	   for(var i=0; i<optionValueB.length;i++){
+		   tableContainB+='<tr><td>' + optionValueB[i].id +'</td>';
+           tableContainB+='<td>' + optionValueB[i].style +'</td>';
+           tableContainB+='<td>' + optionValueB[i].title +'</td>';
+           tableContainB+='<td>' + optionValueB[i].img +'</td>';
+           tableContainB+='<td>' + optionValueB[i].operation +'</td></tr>';
+		   };
+		   $("#tableListB").html(tableContainB);
+        var optionValueC = option.tableDataC;
+       var tableContainC="";
+	   for(var i=0; i<optionValueC.length;i++){
+		   tableContainC+='<tr><td>' + optionValueC[i].id +'</td>';
+           tableContainC+='<td>' + optionValueC[i].style +'</td>';
+           tableContainC+='<td>' + optionValueC[i].title +'</td>';
+           tableContainC+='<td>' + optionValueC[i].img +'</td>';
+           tableContainC+='<td>' + optionValueC[i].operation +'</td></tr>';
+		   };
+		   $("#tableListC").html(tableContainC);
+		    var optionValueD = option.tableDataD;
+       var tableContainD="";
+	   for(var i=0; i<optionValueD.length;i++){
+		   tableContainD+='<tr><td>' + optionValueD[i].id +'</td>';
+           tableContainD+='<td>' + optionValueD[i].style +'</td>';
+           tableContainD+='<td>' + optionValueD[i].title +'</td>';
+           tableContainD+='<td>' + optionValueD[i].img +'</td>';
+           tableContainD+='<td>' + optionValueD[i].operation +'</td></tr>';
+		   };
+		   $("#tableListD").html(tableContainD);
+		   var optionValueE = option.tableDataE;
+       var tableContainE="";
+	   for(var i=0; i<optionValueE.length;i++){
+		   tableContainE+='<tr><td>' + optionValueE[i].id +'</td>';
+           tableContainE+='<td>' + optionValueE[i].style +'</td>';
+           tableContainE+='<td>' + optionValueE[i].title +'</td>';
+           tableContainE+='<td>' + optionValueE[i].img +'</td>';
+           tableContainE+='<td>' + optionValueE[i].operation +'</td></tr>';
+		   };
+		   $("#tableListE").html(tableContainE)  	  		      
+	   
+    },
+    error: function() {
+        alert("错了")
+    }
+});
+
+
+});
+
+
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

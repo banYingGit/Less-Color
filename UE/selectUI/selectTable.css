@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* 下拉列表外部结构 */
+
+.select-dome-small {
+	position: relative;
+
+	width: 100%;
+	height:340px;
+	margin-top:30px;
+	border: solid 1px #ddd;
+	box-sizing:border-box;
+}
+.select-dome-scroll {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin: 19px 0;
+	padding: 0 19px;
+	box-sizing:border-box;
+	overflow: hidden;
+}
+/*默认样式*/
+.select-dome-small ul {
+}
+.select-dome-small ul li {
+	height: 20px;
+	padding: 5px 0;
+	line-height: 20px;
+	cursor: pointer;
+}
+.select-dome-small ul li span{ margin-left:10px;}
+.select-dome-operation {
+
+	width:100%;
+	height: 300px;
+	padding-top:30px;
+	text-align:center;
+}
+.select-dome-operation a{ margin-top:10px;}
+/*全选样式*/
+.select-dome-all {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 240px;
+	height: 30px;
+}
+/*表格选样式*/
+.select-table li {
+	display: block;
+	float:left;
+	width: 60px;
+	height: 50px !important;
+	margin: 5px 3px 0 4px;
+	padding: 0 !important;
+	overflow: hidden;
+	background: #ddd;
+	line-height: 50px !important;
+	text-align: center;
+}
+/*jquery UI 加载样式*/
+.ui-selecting {
+	background: #FF8888 !important;
+}
+.ui-selected {
+	background: #f05050 !important;
+	color: #fff;
+}
+.ui-selectable-helper{ position:absolute;}

@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+.menu-icon {
+	float: left;
+	width: 24px;
+	height: 25px;
+	margin: 38px 0 0 35px;
+	cursor: pointer;
+}
+.menu-icon span {
+	position: relative;
+	display: block;
+	width: 24px;
+	height: 3px;
+}
+.menu-icon span:after,
+.menu-icon span:before {
+	position: absolute;
+	left: 0;
+	width: 24px;
+	height: 3px;
+	content: '';
+	transition: all 0.5s;
+}
+.menu-icon span:before {
+	top: -8px;
+	transform: rotate(0);
+}
+.menu-icon span:after {
+	top: 8px;
+	transform: rotate(0);
+}
+.menu-icon-sm.menu-icon span:before {
+	top: -5px;
+	width: 15px;
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+}
+.menu-icon-sm.menu-icon span:after {
+	top: 5px;
+	width: 15px;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+}
+.menu {
+	position: fixed;
+	top: 65px;
+	left: 0;
+	display: block;
+	width: 260px;
+	height: calc(100% - 65px);
+	overflow: hidden;
+	background: #fff;
+	transition: all .5s;
+}
+.menu-sm { left: -260px; }
+.menu-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.left-nav {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.left-nav li { position: relative; }
+.left-nav li i { padding-right: 5px; }
+.level-one {
+	display: block;
+	height: 50px;
+	padding-left: 20px;
+	line-height: 50px;
+}
+.left-nav li ul { display: none; }
+.left-nav li ul li {
+	height: 35px;
+	padding-left: 35px;
+	border: none;
+	line-height: 35px;
+}
+
+/*text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;*/

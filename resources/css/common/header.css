@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	min-height: 65px;
+}
+.header h1 {
+	float: left;
+	padding-left: 20px;
+	line-height: 65px;
+}
+.header-search {
+	position: relative;
+	display: block;
+	float: right;
+	width: 340px;
+	height: 35px;
+	margin: 15px 10px 0 0;
+	padding-left: 20px;
+	border-radius: 17px;
+	background: rgba(255, 255, 255, 0.2);
+}
+.header-search input {
+	width: 280px;
+	height: 35px;
+	border: none;
+	background: none;
+	line-height: 35px\9;
+	color: #fff;
+}
+.header-search a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 50px;
+	height: 35px;
+	font-size: 24px;
+	line-height: 35px;
+	color: #fff;
+	text-align: center;
+}
+/* remind*/
+.remind {
+	position: relative;
+	display: block;
+	float: right;
+	height: 65px;
+	width: 50px;
+}
+.remind i {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	line-height: 65px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.remind strong {
+	position: absolute;
+	top: 20px;
+	left: 25px;
+	display: block;
+	float: left;
+	width: 8px;
+	height: 8px;
+	background: #F9FF00;
+	border-radius: 50%;
+}
+.remind:hover { background: rgba(255, 255, 255, 0.2) }
+.remind:hover .remind-box { display: block; }
+.remind-box {
+	position: absolute;
+	top: 65px;
+	right: 0;
+	display: none;
+	width: 350px;
+	height: 270px;
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+.remind-box-title {
+	height: 49px;
+	border-bottom: 1px solid #d7e5f5;
+	font-size: 16px;
+	line-height: 49px;
+	color: #555;
+	text-indent: 10px;
+}
+.remind-box-title span {
+	padding: 0 5px;
+	font-size: 16px;
+	color: #ff0000;
+}
+.remind-box-main {
+	position: relative;
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+}
+.remind-box-list li {
+	position: relative;
+	height: 30px;
+	padding: 0 15px 0 35px;
+	color: #555;
+	line-height: 30px;
+}
+.remind-box-list li a {
+	float: right;
+	color: #5d9cec;
+}
+.remind-box-list li:before {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	display: block;
+	width: 10px;
+	height: 30px;
+	overflow: hidden;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 25px;
+	content: '.'
+}
+.remind-more {
+	display: block;
+	line-height: 40px;
+	text-align: center;
+	color: #5d9cec;
+}
+/*用户*/
+.user {
+	position: relative;
+	display: block;
+	float: right;
+	margin: 0 25px 0 5px;
+	line-height: 65px;
+	color: #fff;
+}
+.user img {
+	margin-right: 10px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+}
+.user:hover .user-box { display: block; }
+.user-box {
+	position: absolute;
+	display: none;
+	top: 65px;
+	right: 0;
+	width: 180px;
+	height: 175px;
+	padding-top: 5px;
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+.user-box p {
+	padding: 5px 0;
+	margin: 0 10px;
+	line-height: 20px;
+	text-align: left;
+	border-bottom: dashed 1px #e1e1e1;
+	color: #666;
+}
+.user-box p span { display: block; }
+.user-box p a { color: #5d9cec; }
+.user-box p a i {
+	color: #ccc;
+	padding-right: 5px;
+}
+/* 换肤 */
+.skin {
+	position: fixed;
+	top: 80px;
+	right: -125px;
+	width: 150px;
+	height: 35px;
+	padding-right: 10px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+	transition: all .5s;
+}
+.skin:hover { right: -10px; }
+.skin i {
+	display: block;
+	float: left;
+	width: 35px;
+	height: 35px;
+	border-right: solid 1px #ddd;
+	font-size: 18px;
+	line-height: 35px;
+	color: #666;
+	text-align: center;
+}
+.skin p {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 15px;
+	padding: 10px 0;
+}
+.skin p span {
+	display: block;
+	float: left;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	cursor: pointer;
+	text-indent: -999em;
+}
+#skinRed { background: #fb6d9d; }
+#skinBlue { background: #5d9cec }
+#skinGreen{background: #81C868 }
